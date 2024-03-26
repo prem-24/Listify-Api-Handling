@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Listify</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      .bg-custom {
+        background-color: #edf2f4;
+      }
+      .text-custom {
+        color: #2b2d42;
+      }
+      .border-custom {
+        border-color: #8d99ae;
+      }
+      #addButton {
+        background-color: #3097e0;
+        color: #ffffff;
+      }
+      #addButton:hover {
+        background-color: #1785d4;
+        color: #ffffff;
+      }
+    </style>
+  </head>
+
+  <body class="p-5 bg-custom flex items-center justify-center h-screen">
+    <div class="max-w-xl w-full bg-white rounded-lg shadow-md p-8">
+      <h1 class="text-3xl font-bold text-center mb-8 text-custom">Listify</h1>
+      <div class="flex flex-col space-y-4">
+        <ul id="items" class="border-b border-gray-300 pb-4"></ul>
+        <button
+          id="addButton"
+          class="border border-custom px-5 py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-custom text-custom"
+          onclick="addItem()"
+        >
+          Add Item
+        </button>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
